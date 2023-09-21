@@ -159,6 +159,47 @@ canvas{
     position: absolute;
     opacity: .1;
 }
+.projects{
+    position: absolute;
+    display: none;
+    z-index: 99999;
+}
+.projects>ul>li{
+    list-style-type: none;
+}
+.projects>ul>li>a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    line-height: 50px;
+    -webkit-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+}
+@font-face {
+    font-family: Dosis;
+    src: url('Dosis-Bold.ttf');
+}
+@font-face {
+    font-family: Rammetto;
+    src: url('RammettoOne-Regular.ttf');
+}
+.projects>ul>li:nth-child(1){
+    font-family: Rammetto;
+    font-weight: 700;
+    font-size: 2rem;
+
+}
+.projects>ul>li:nth-child(2){
+    font-family: Dosis;
+    font-weight: 700;
+    font-size: 2rem;
+
+}
+
+.projects>ul>li>a:hover{
+    color: #ffffff54;
+}
 @-webkit-keyframes typing {
     from { width: 0 }
     to { width: 100% }
@@ -251,5 +292,9 @@ canvas{
 @media screen and (max-width: 480px) {
     main > div{
         padding: 10px;
+    }
+    .projects>ul>li>a{
+        font-size: 1.5rem;
+    
     }
 }
