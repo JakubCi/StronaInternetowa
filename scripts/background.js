@@ -3,15 +3,7 @@ canvas.width = document.body.clientWidth;
 canvas.height = document.body.clientHeight;
 
 var ctx = canvas.getContext('2d');
-
-
-
-/*Modify options here*/
-
-//possible characters that will appear
-var characterList = ['Creativity', 'Teamwork', 'Problem-solving', 'Communication skills', 'Confidence', 'Analitycal Skills', 'Self-discipline', 'Curiosity', 'Self-development', 'Organization', 'Responsibility', 'Punctuality', '</>', 'HTML', 'CSS', 'Python', 'Selenium', 'Javascript', 'MySQL', 'Sqlite3', 'Machine Learning', 'Artificcial Intelligence', ' ', ' ', ' ', ' '];
-
-//stocks possible character attributes
+var mediaQuery=window.matchMedia("(max-width: 1020px)")
 var layers = {
     n: 5, //number of layers
     letters: [100, 40, 30, 20, 10], //letters per layer (starting from the deepest layer)
@@ -20,6 +12,42 @@ var layers = {
     color: ['#fff', '#eee', '#ccc', '#bbb', '#aaa'], //color of the letters (starting from the deepest layer)
     font: 'Courier' //font family (of every layer)
 };
+var characterList = ['Creativity', 'Teamwork', 'Problem-solving', 'Communication skills', 'Confidence', 'Analitycal Skills', 'Self-discipline', 'Curiosity', 'Self-development', 'Organization', 'Responsibility', 'Punctuality', '</>', 'HTML', 'CSS', 'Python', 'Selenium', 'Javascript', 'MySQL', 'Sqlite3', 'Machine Learning', 'Artificcial Intelligence', ' ', ' ', ' ', ' '];
+resize2(mediaQuery)
+x.addEventListener('resize',()=>{
+    resize2()
+})
+function resize2(mediaQuery){
+    if(!mediaQuery.matches){
+        layers = {
+            n: 5, //number of layers
+            letters: [100, 40, 30, 20, 10], //letters per layer (starting from the deepest layer)
+            coef: [0.1, 0.2, 0.4, 0.6, 0.8], //how much the letters move from the mouse (starting from the deepest layer)
+            size: [16, 22, 36, 40, 46], //font size of the letters (starting from the deepest layer)
+            color: ['#fff', '#eee', '#ccc', '#bbb', '#aaa'], //color of the letters (starting from the deepest layer)
+            font: 'Courier' //font family (of every layer)
+        };
+        characterList = ['Creativity', 'Teamwork', 'Problem-solving', 'Communication skills', 'Confidence', 'Analitycal Skills', 'Self-discipline', 'Curiosity', 'Self-development', 'Organization', 'Responsibility', 'Punctuality', '</>', 'HTML', 'CSS', 'Python', 'Selenium', 'Javascript', 'MySQL', 'Sqlite3', 'Machine Learning', 'Artificcial Intelligence', ' ', ' ', ' ', ' '];
+    }
+    else{
+        layers = {
+            n: 4, //number of layers
+            letters: [15, 7, 8, 2, 2], //letters per layer (starting from the deepest layer)
+            coef: [0.1, 0.2, 0.4, 0.6, 0.8], //how much the letters move from the mouse (starting from the deepest layer)
+            size: [16, 22, 36, 40, 46], //font size of the letters (starting from the deepest layer)
+            color: ['#fff', '#eee', '#ccc', '#bbb', '#aaa'], //color of the letters (starting from the deepest layer)
+            font: 'Courier' //font family (of every layer)
+        };
+        characterList = ['Creativity', 'Problem-solving', 'Communication skills', 'Analitycal Skills','Responsibility', '</>', 'HTML', 'CSS', 'Python', 'Selenium', 'Javascript','Machine Learning'];
+    }
+}
+/*Modify options here*/
+
+//possible characters that will appear
+
+
+//stocks possible character attributes
+
 
 /*End of options*/
 
@@ -119,8 +147,3 @@ update();
 window.onresize = function() {
     location.reload();
 };
-
-document.getElementById('close').onclick = function() {
-    this.parentElement.style.visibility = 'hidden';
-    this.parentElement.style.opacity = '0';
-}
