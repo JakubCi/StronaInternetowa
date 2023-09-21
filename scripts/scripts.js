@@ -124,7 +124,7 @@ function resize(x){
                 projects.style.display='none'
                 name.style.display='none'
                 container.style.flexDirection='row'
-                container.style.margin='50px'
+                container.style.margin='42px'
                 contact.style.opacity='0'
                 contact.style.display='none'
                 textappear.style.opacity='1'
@@ -140,7 +140,7 @@ function resize(x){
                 projects.style.display='none'
                 textappear.style.display='none'
                 container.style.flexDirection='column'
-                container.style.margin='30px'
+                container.style.margin='20px'
                 
                 name.style.display='block'
                 
@@ -168,7 +168,7 @@ function resize(x){
             }
             else if(clicked2==true){
                 projects.style.display='none'
-                container.style.margin='30px'
+                container.style.margin='20px'
                 name.style.display='block'
                 contact.style.display='none'
                 contact.style.opacity='0'
@@ -196,7 +196,7 @@ function resize(x){
                 }
                 else if(clicked3==true){
                     container.style.flexDirection='column'
-                    container.style.margin='30px'
+                    container.style.margin='20px'
                     projects.style.display='none'
                     name.style.display='block'
                     clicked=false
@@ -211,7 +211,7 @@ function resize(x){
             clicked=false;
             clicked2=false;
             clicked3=false
-            container.style.margin='30px';
+            container.style.margin='20px';
             contact.style.display='none'
             textappear.style.display='none'
             contact.style.opacity='0'
