@@ -288,6 +288,16 @@ canvas{
     .contact>h2>a{
         font-size: .8rem;
     }
+    .icons>ul>li{
+        line-height: 40px;
+        font-size: 1.5rem;
+    }
+    .info{
+        font-size: .65rem;
+    }
+    main>div{
+        padding: 8px;
+    }
 }
 @media screen and (max-width: 480px) {
     main > div{
