@@ -299,6 +299,12 @@ canvas{
         padding: 8px;
     }
 }
+@media screen and (max-width: 500px) {
+    .info{
+        height: 50%;
+        overflow-x: auto;
+    }
+}
 @media screen and (max-width: 480px) {
     main > div{
         padding: 10px;
