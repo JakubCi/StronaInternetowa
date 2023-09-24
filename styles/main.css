@@ -249,6 +249,34 @@ canvas{
     100% { background-position: 5%,0 }
 }
 
+@-webkit-keyframes bg-animation2 {
+    0% { background-position: 0,0 }
+    10% { background-position: -50%,-50% }
+    20% { background-position: -100%,50% }
+    30% { background-position: 50%,-100% }
+    40% { background-position: -50%,150% }
+    50% { background-position: -100%,50% }
+    60% { background-position: 150%,0 }
+    70% { background-position: 0,100% }
+    80% { background-position: -150%,0 }
+    90% { background-position: 100%,50% }
+    100% { background-position: 50%,0 }
+}
+
+@keyframes bg-animation2 {
+    0% { background-position: 0,0 }
+    10% { background-position: -50%,-50% }
+    20% { background-position: -100%,50% }
+    30% { background-position: 50%,-100% }
+    40% { background-position: -50%,150% }
+    50% { background-position: -100%,50% }
+    60% { background-position: 150%,0 }
+    70% { background-position: 0,100% }
+    80% { background-position: -150%,0 }
+    90% { background-position: 100%,50% }
+    100% { background-position: 50%,0 }
+}
+
 @media screen and (max-width: 1200px) {
     .icons>ul>li{
         display: inline;
@@ -274,6 +302,11 @@ canvas{
     .name>h1{
         font-size: 3rem;
     }
+    body{
+        background: rgba(0, 0, 0, 0.904) url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+        -webkit-animation: bg-animation2 .1s infinite;
+                animation: bg-animation2 .1s infinite;
+    }
 }
 @media screen and (max-width: 610px) {
     .icons>ul>li{
@@ -297,12 +330,6 @@ canvas{
     }
     main>div{
         padding: 8px;
-    }
-}
-@media screen and (max-width: 500px) {
-    .info{
-        height: 50%;
-        overflow-x: auto;
     }
 }
 @media screen and (max-width: 480px) {
