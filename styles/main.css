@@ -327,6 +327,8 @@ canvas{
     }
     .info{
         font-size: .65rem;
+            height: 50%;
+            overflow-y: auto;
     }
     main>div{
         padding: 8px;
