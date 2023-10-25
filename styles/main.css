@@ -17,6 +17,7 @@ body{
   opacity: .9;
   visibility: visible;
 }
+
 main{
     position: relative;
     display: -webkit-box;
@@ -200,6 +201,30 @@ canvas{
 .projects>ul>li>a:hover{
     color: #ffffff54;
 }
+
+.icons_{
+
+    position: absolute;
+    gap:17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: 20px;
+    left: 20px;
+}
+.icons_>a>img{
+    height: 35px;
+    -webkit-transition: -webkit-transform 0.4s ease;
+    transition: -webkit-transform 0.4s ease;
+    -o-transition: transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+.icons_>a>img:hover{
+    -webkit-transform: translatey(-10px);
+        -ms-transform: translatey(-10px);
+            transform: translatey(-10px);
+}
 @-webkit-keyframes typing {
     from { width: 0 }
     to { width: 100% }
@@ -317,6 +342,8 @@ canvas{
 @media screen and (max-width: 570px) {
     .info{
         font-size: .5rem;
+        height:50%;
+        overflow-y: auto;
     }
     .contact>h2>a{
         font-size: .9rem;
@@ -327,8 +354,6 @@ canvas{
     }
     .info{
         font-size: .65rem;
-            height: 50%;
-            overflow-y: auto;
     }
     main>div{
         padding: 8px;
