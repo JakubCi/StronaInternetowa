@@ -21,7 +21,7 @@ function resize(x){
                 projects.style.display='none'
                 name.style.display='none'
                 container.style.flexDirection='row'
-                container.style.margin='100px'
+                container.style.margin='200px'
                 contact.style.opacity='0'
                 contact.style.display='none'
                 textappear.style.opacity='1'
@@ -54,7 +54,7 @@ function resize(x){
                 projects.style.display='none'
                 name.style.display='none'
                 container.style.flexDirection='row'
-                container.style.margin='200px'
+                container.style.margin='300px'
                 textappear.style.opacity='0'
                 textappear.style.display='none'
                 contact.style.display='block'
@@ -225,3 +225,12 @@ x.addEventListener('resize',()=>{
     resize()
 })
 
+let titleName=document.querySelector('#title')
+  
+  document.addEventListener("visibilitychange", event => {
+    if (document.visibilityState == "visible") {
+        titleName.innerHTML='Jakub Cierocki'
+    } else {
+        titleName.innerHTML='Do zobaczenia!'
+    }
+  })
